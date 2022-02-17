@@ -1,4 +1,4 @@
-package com.example.sayarti_flutter
+package com.amine.sayarti_flutter
 
 import io.flutter.embedding.android.FlutterActivity
 

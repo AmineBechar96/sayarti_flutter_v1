@@ -19,6 +19,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return Observer(
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -29,14 +30,6 @@ class MyApp extends StatelessWidget {
             : AppThemeData.darkTheme,
         navigatorKey: navigatorKey,
         scrollBehavior: SBehavior(),
-        supportedLocales: LanguageDataModel.languageLocales(),
-        localizationsDelegates: [
-          AppLocalizations(),
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate
-        ],
-        localeResolutionCallback: (locale, supportedLocales) => locale,
-        locale: Locale(appStore.selectedLanguageCode),
       ),
     );
   }

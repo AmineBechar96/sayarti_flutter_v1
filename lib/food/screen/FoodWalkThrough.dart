@@ -25,14 +25,14 @@ class FoodWalkThroughState extends State<FoodWalkThrough> {
   int currentIndexPage = 0;
   int? pageLength;
   var titles = [
-    "Discover place near you",
-    "Most Delicious Dishes!",
-    "Just make an order!"
+    "Découvrir les Services et Magasins de Vente",
+    "Les Dernières informations sur les voitures!",
+    "Visualiser l'état du marché!"
   ];
   var subTitles = [
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.This is simply text ",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.This is simply text  ",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.This is simply text"
+    "Tout les Meilleurs Services et Les Magasins de Vente des accesoires de Voiture",
+    "L'Actualité des Automobiles de La Presse Algérienne et Statistique En Temps Réel Du Marché en Algerie",
+    "Les Informations En Temps Réel des Marchés de Voiture Neuf et Occasion"
   ];
 
   @override

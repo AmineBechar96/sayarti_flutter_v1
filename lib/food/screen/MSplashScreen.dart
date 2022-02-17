@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:sayarti_flutter/food/screen/FoodWalkThrough.dart';
 import 'package:sayarti_flutter/main.dart';
+import 'package:is_first_run/is_first_run.dart';
+
+import 'FoodSignIn.dart';
 
 class MSplashScreen extends StatefulWidget {
   static String tag = '/MSplashScreen';
@@ -23,10 +26,14 @@ class MSplashScreenState extends State<MSplashScreen> {
 
   Future checkFirstSeen() async {
     setStatusBarColor(black);
-
-    await Future.delayed(Duration(seconds: 2));
+    bool firstCall = await IsFirstRun.isFirstCall();
+    await Future.delayed(Duration(seconds: 1));
     finish(context);
-    FoodWalkThrough().launch(context);
+    if (firstCall == true) {
+      FoodWalkThrough().launch(context);
+    } else {
+      FoodSignIn().launch(context);
+    }
   }
 
   @override
