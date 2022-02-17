@@ -10,7 +10,7 @@ import 'package:sayarti_flutter/main.dart';
 import 'package:sayarti_flutter/main/utils/AppWidget.dart';
 import 'package:sayarti_flutter/main/utils/dots_indicator/dots_indicator.dart';
 
-import 'FoodSignIn.dart';
+import 'Accueil.dart';
 
 class FoodWalkThrough extends StatefulWidget {
   static String tag = '/FoodWalkThrough';
@@ -95,7 +95,7 @@ class FoodWalkThroughState extends State<FoodWalkThrough> {
                           child: Text(food_lbl_skip,
                               style: secondaryTextStyle(size: 16)),
                           onTap: () {
-                            FoodSignIn().launch(context);
+                            Acceuil().launch(context);
                           },
                         ),
                         DotsIndicator(
@@ -114,7 +114,7 @@ class FoodWalkThroughState extends State<FoodWalkThrough> {
                             currentIndexPage = currentIndexPage + 1;
                             if (currentIndexPage >= 3) {
                               currentIndexPage = 0;
-                              FoodSignIn().launch(context);
+                              Acceuil().launch(context);
                             } else {
                               pageController.animateToPage(currentIndexPage,
                                   duration: Duration(milliseconds: 500),

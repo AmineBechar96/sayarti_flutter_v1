@@ -4,7 +4,7 @@ import 'package:sayarti_flutter/food/screen/FoodWalkThrough.dart';
 import 'package:sayarti_flutter/main.dart';
 import 'package:is_first_run/is_first_run.dart';
 
-import 'FoodSignIn.dart';
+import 'Accueil.dart';
 
 class MSplashScreen extends StatefulWidget {
   static String tag = '/MSplashScreen';
@@ -32,7 +32,7 @@ class MSplashScreenState extends State<MSplashScreen> {
     if (firstCall == true) {
       FoodWalkThrough().launch(context);
     } else {
-      FoodSignIn().launch(context);
+      Acceuil().launch(context);
     }
   }
 
