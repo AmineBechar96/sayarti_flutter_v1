@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+import 'package:nb_utils/nb_utils.dart';
+import 'package:sayarti_flutter/sayarti/component/NBAllNewsComponent.dart';
+import 'package:sayarti_flutter/sayarti/models/SayartiAppModel.dart';
+import 'package:sayarti_flutter/sayarti/utils/SayartiDataGenerator.dart';
+
+class SayartiNewsScreen extends StatefulWidget {
+  static String tag = '/SayartiNewsScreen';
+
+  @override
+  SayartiNewsScreenState createState() => SayartiNewsScreenState();
+}
+
+class SayartiNewsScreenState extends State<SayartiNewsScreen>
+    with SingleTickerProviderStateMixin {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  List<NBNewsDetailsModel> mNewsList = nbGetNewsDetails();
+
+  @override
+  void setState(fn) {
+    if (mounted) super.setState(fn);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: _scaffoldKey,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Text('Actualité Automobile',
+            style: boldTextStyle(color: black, size: 20)),
+        backgroundColor: white,
+        centerTitle: true,
+      ),
+      body: NBAllNewsComponent(),
+    );
+  }
+}
