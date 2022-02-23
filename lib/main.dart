@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:sayarti_flutter/food/screen/MSplashScreen.dart';
 import 'package:sayarti_flutter/locale/Languages.dart';
 import 'package:sayarti_flutter/main/store/AppStore.dart';
+import 'package:sayarti_flutter/main/utils/AppDataProvider.dart';
 import 'package:sayarti_flutter/main/utils/AppConstant.dart';
 import 'package:sayarti_flutter/main/utils/AppTheme.dart';
+import 'package:sayarti_flutter/sayarti/screens/SayartiSplashScreen.dart';
 
 AppStore appStore = AppStore();
 BaseLanguage? language;
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await initialize(aLocaleLanguageList: languageList());
+
   appStore.toggleDarkMode(value: getBoolAsync(isDarkModeOnPref));
   runApp(MyApp());
 }
@@ -21,7 +26,7 @@ class MyApp extends StatelessWidget {
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: '$mainAppName${!isMobile ? ' ${platformName()}' : ''}',
-        home: MSplashScreen(),
+        home: SayartiSplashScreen(),
         theme: !appStore.isDarkModeOn
             ? AppThemeData.lightTheme
             : AppThemeData.darkTheme,
