@@ -6,12 +6,18 @@ const t5_lbl_listing = " History";
 const t5_recherch_prix = " Estimation Prix";
 const t5_manage_wallet = "Recher Budget";
 const t5_support = " Support";
-const t5_settings = " Vérifier Etat";
+const t5_settings = " Paramétres";
 const t5_gift = " Gift";
 const t5_discounts = " Discounts";
 const t5_language = " Language";
 const t5_fingerprint = " Fingerprint";
 const t5_fast_payment = " Fast Payment";
+const t5_verifier_etat = " Etat de Voiture";
+const t5_statistique = " Statistique";
+const t5_connection = " Connexion";
+const t5_contact = " Contact";
+const t5_help = " Aide";
+const t5_dark_mode = "Mode Sombre";
 
 const sayarti_lbl_what_would_you_like_to_learn_n_today_search_below =
     "Que Voulez vous Bénificier de \n  Sayarti? Cherchez au Dessous.";

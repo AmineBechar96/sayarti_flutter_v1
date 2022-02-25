@@ -32,14 +32,14 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
   var iconList = <String>[
     t5_analysis,
     t5_wallet,
-    t5_customer_service,
-    t5_img_settings
+    t5_img_settings,
+    t5_statistique_img,
   ];
   var nameList = <String>[
     t5_recherch_prix,
     t5_manage_wallet,
-    t5_support,
-    t5_settings
+    t5_verifier_etat,
+    t5_statistique
   ];
 
   void changePage(int index) {
@@ -78,8 +78,8 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Image.asset('images/sayarti.png',
-            fit: BoxFit.cover, width: 150, height: 50),
-        backgroundColor: sayarti_colorPrimary,
+            fit: BoxFit.cover, width: 150, height: 50, color: Colors.white),
+        backgroundColor: WAPrimaryColor,
         centerTitle: true,
       ),
       backgroundColor: t5LayoutBackgroundWhite,
@@ -143,6 +143,11 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+                        text("Nos Services",
+                            textColor: t5TextColorPrimary,
+                            fontFamily: fontMedium,
+                            fontSize: textSizeLarge),
+                        const SizedBox(height: 30),
                         Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

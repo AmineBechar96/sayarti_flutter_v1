@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:sayarti_flutter/main/utils/AppWidget.dart';
 import 'package:sayarti_flutter/sayarti/component/NBAllNewsComponent.dart';
 import 'package:sayarti_flutter/sayarti/models/SayartiAppModel.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiDataGenerator.dart';
@@ -23,12 +24,16 @@ class SayartiNewsScreenState extends State<SayartiNewsScreen>
 
   @override
   Widget build(BuildContext context) {
+    changeStatusColor(Colors.white);
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text('Actualité Automobile',
-            style: boldTextStyle(color: black, size: 20)),
+        title: Image.asset('images/sayarti.png',
+            fit: BoxFit.cover, width: 150, height: 50),
+
+        //title: Text('Actualité Automobile',
+        //style: boldTextStyle(color: black, size: 20)),
         backgroundColor: white,
         centerTitle: true,
       ),

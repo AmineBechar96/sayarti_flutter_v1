@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:sayarti_flutter/sayarti/component/NBNewsComponent.dart';
 import 'package:sayarti_flutter/sayarti/models/SayartiAppModel.dart';
+import 'package:sayarti_flutter/sayarti/screens/SayartiToutActualit%C3%A9.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiColors.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiDataGenerator.dart';
 
@@ -69,7 +70,9 @@ class NBAllNewsComponentState extends State<NBAllNewsComponent> {
             children: [
               Text('Dernièrs Articles', style: boldTextStyle(size: 20)),
               Text('Voir Plus', style: boldTextStyle(color: WAPrimaryColor))
-                  .onTap(() {}),
+                  .onTap(() {
+                SayartiToutActualite().launch(context);
+              }),
             ],
           ).paddingOnly(left: 16, right: 16),
           NBNewsComponent(list: mNewsList),
