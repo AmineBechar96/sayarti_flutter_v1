@@ -23,6 +23,8 @@ const t5_payments = "images/sayarti/t5_payment.svg";
 const t5_signin = "images/sayarti/sign-in.svg";
 const t5_contact_img = "images/sayarti/contact.svg";
 const t5_help_img = "images/sayarti/help.svg";
+const t5_terms_img = "images/sayarti/help.svg";
+const t5_qa_img = "images/sayarti/help2.svg";
 
 const quiz_ic_communication = "$BaseUrl/images/quiz/quiz_ic_communication.png";
 const quiz_ic_communication2 =
