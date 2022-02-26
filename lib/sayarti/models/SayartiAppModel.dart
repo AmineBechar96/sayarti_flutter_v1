@@ -47,3 +47,14 @@ class NBBannerItemModel {
 
   NBBannerItemModel({this.image});
 }
+
+class SayartiContactUsModel {
+  var title = "";
+  var subtitle = "";
+}
+
+class SayartiQuesAnsModel {
+  String ques = "";
+
+  SayartiQuesAnsModel(this.ques);
+}

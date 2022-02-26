@@ -191,3 +191,48 @@ List<NBNewsDetailsModel> nbGetNewsDetails() {
   ));
   return newsDetailsList;
 }
+
+List<SayartiContactUsModel> sayartiContactUsData() {
+  List<SayartiContactUsModel> list = [];
+  SayartiContactUsModel model1 = SayartiContactUsModel();
+  model1.title = "Téléphone";
+  model1.subtitle = "+05 42 23 18 76";
+
+  SayartiContactUsModel model2 = SayartiContactUsModel();
+  model2.title = "Email";
+  model2.subtitle = "Réponse dans les 24 Heures de Travaille";
+
+  list.add(model1);
+  list.add(model2);
+
+  return list;
+}
+
+List<SayartiQuesAnsModel> sayartiQuestionList() {
+  List<SayartiQuesAnsModel> list = [];
+
+  var list1 = SayartiQuesAnsModel("Question: lorem ipsum doller sit ?");
+  list.add(list1);
+
+  var list2 = SayartiQuesAnsModel(
+      "Money return when you go shopping with credit card of Cy Captial Bank ?");
+  list.add(list2);
+
+  var list3 = SayartiQuesAnsModel(
+      "Each payment process is so simple and hassle - free ?");
+  list.add(list3);
+
+  var list4 = SayartiQuesAnsModel(
+      "Cy Captial Bank give a giftbox for new customers who create account ?");
+  list.add(list4);
+
+  var list5 = SayartiQuesAnsModel(
+      "Each payment process is so simple and hassle - free ?");
+  list.add(list5);
+
+  var list6 = SayartiQuesAnsModel(
+      "Money return when you go shopping with credit card of Cy Captial Bank ?");
+  list.add(list6);
+
+  return list;
+}

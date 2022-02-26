@@ -80,3 +80,60 @@ AppBar nbAppBarWidget(BuildContext context, {String? title}) {
     centerTitle: true,
   );
 }
+
+class sayarticontactButton extends StatefulWidget {
+  var textContent;
+
+  //   var icon;
+  VoidCallback onPressed;
+
+  sayarticontactButton({
+    required this.textContent,
+    required this.onPressed,
+    //   @required this.icon,
+  });
+
+  @override
+  sayarticontactButtonState createState() => sayarticontactButtonState();
+}
+
+// ignore: camel_case_types
+class sayarticontactButtonState extends State<sayarticontactButton> {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: widget.onPressed,
+      child: Container(
+          decoration: boxDecoration(bgColor: sayarti_colorPrimary, radius: 16),
+          padding: EdgeInsets.fromLTRB(16, 10, 16, 10),
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              Center(
+                child: text(widget.textContent,
+                    textColor: t5White,
+                    fontFamily: fontMedium,
+                    textAllCaps: false),
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle, color: sayarti_colorPrimaryDark),
+                  width: 35,
+                  height: 35,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.arrow_forward,
+                      color: t5White,
+                      size: 20,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          )),
+    );
+  }
+}

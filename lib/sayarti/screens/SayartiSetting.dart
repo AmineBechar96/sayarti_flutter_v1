@@ -5,6 +5,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sayarti_flutter/main/utils/AppConstant.dart';
 import 'package:sayarti_flutter/main/utils/AppWidget.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:sayarti_flutter/sayarti/screens/settings/SayartiContactScreen.dart';
+import 'package:sayarti_flutter/sayarti/screens/settings/SayartiFAScreen.dart';
+import 'package:sayarti_flutter/sayarti/screens/settings/SayartiHelpScreen.dart';
+import 'package:sayarti_flutter/sayarti/screens/settings/SayartiTermsScreen.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiColors.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiImages.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiString.dart';
@@ -170,7 +174,9 @@ class SayartiSettingsState extends State<SayartiSettings> {
                               Icons.keyboard_arrow_right,
                               color: t5TextColorSecondary,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              SayartiContactUs().launch(context);
+                            },
                           ),
                         ],
                       ),
@@ -184,7 +190,41 @@ class SayartiSettingsState extends State<SayartiSettings> {
                               Icons.keyboard_arrow_right,
                               color: t5TextColorSecondary,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              SayartiHelpScreen().launch(context);
+                            },
+                          ),
+                        ],
+                      ),
+                      divider(),
+                      Row(
+                        children: <Widget>[
+                          settingItem(t5_qa, icon: t5_qa_img),
+                          IconButton(
+                            // ignore: prefer_const_constructors
+                            icon: Icon(
+                              Icons.keyboard_arrow_right,
+                              color: t5TextColorSecondary,
+                            ),
+                            onPressed: () {
+                              SayartiQuestionAnswer().launch(context);
+                            },
+                          ),
+                        ],
+                      ),
+                      divider(),
+                      Row(
+                        children: <Widget>[
+                          settingItem(t5_terms, icon: t5_terms_img),
+                          IconButton(
+                            // ignore: prefer_const_constructors
+                            icon: Icon(
+                              Icons.keyboard_arrow_right,
+                              color: t5TextColorSecondary,
+                            ),
+                            onPressed: () {
+                              SayartiTermsConditionScreen().launch(context);
+                            },
                           ),
                         ],
                       ),

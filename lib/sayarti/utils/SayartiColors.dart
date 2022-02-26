@@ -19,6 +19,7 @@ const t5Cat5 = Color(0XFF22ce9a);
 const t5Cat6 = Color(0XFF203afb);
 const t5ViewColor = Color(0XFFB4BBC2);
 const t5TextColorSecondary = Color(0XFF888888);
+const sayarti_greyColor = Color(0xFFA3A0A0);
 
 const sayarti_colorPrimary = Color(0xFF5362FB);
 const sayarti_colorPrimaryDark = Color(0xFF3D50FC);
@@ -27,6 +28,8 @@ const sayarti_colorAccent = Color(0xFF22D8CD);
 const sayarti_color_red = Color(0xFFF12727);
 const sayarti_textColorPrimary = Color(0xFF333333);
 const sayarti_textColorSecondary = Color(0xFF918F8F);
+
+const mpAppButtonColor = Color(0xFF1ECFF5);
 
 const sayarti_app_background = Color(0xFFf3f5f9);
 const sayarti_view_color = Color(0xFFDADADA);
@@ -49,3 +52,5 @@ const sayarti_color_twitter = Color(0xFF2CB6F8);
 const sayarti_color_transparent = Color(0xFF00FFFFFF);
 const sayarti_ShadowColor = Color(0X95E9EBF0);
 const sayarti_form_google = Color(0xFFF13B19);
+
+const sayarti_blackColor = Color(0xFF070706);
