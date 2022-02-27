@@ -85,7 +85,9 @@ class SayartiAcceuilState extends State<SayartiAcceuil> {
 
   @override
   Widget build(BuildContext context) {
-    changeStatusColor(WAPrimaryColor);
+    changeStatusColor(
+      appStore.isDarkModeOn ? t5ColorPrimary : WAPrimaryColor,
+    );
     width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: t5LayoutBackgroundWhite,
@@ -99,14 +101,14 @@ class SayartiAcceuilState extends State<SayartiAcceuil> {
             _selectedIndex = index;
           });
         },
-        backgroundColor: appStore.appBarColor,
+        backgroundColor: context.scaffoldBackgroundColor,
         hasNotch: false,
         hasInk: true,
         inkColor: t5ColorPrimaryLight,
         items: <BubbleBottomBarItem>[
           tab(t5_img_home, t5_home),
           tab(t5_newspaper, t5_newspapers),
-          tab(t5_list_check, t5_lbl_listing),
+          tab(t5_list_check, t5_service),
           tab(t5_user, t5_lbl_profile),
         ],
       ),

@@ -71,12 +71,15 @@ TextFormField sayartiEditTextStyle(var hintText, {isPassword = true}) {
 AppBar nbAppBarWidget(BuildContext context, {String? title}) {
   return AppBar(
     leading: IconButton(
-        icon: Icon(Icons.arrow_back),
+        icon: Icon(Icons.arrow_back,
+            color: appStore.isDarkModeOn ? Colors.white : null),
         onPressed: () {
           finish(context);
         }),
-    title: Text('$title', style: boldTextStyle(color: black, size: 20)),
-    backgroundColor: white,
+    title: Text('$title',
+        style: boldTextStyle(
+            color: appStore.isDarkModeOn ? Colors.white : black, size: 20)),
+    backgroundColor: context.scaffoldBackgroundColor,
     centerTitle: true,
   );
 }

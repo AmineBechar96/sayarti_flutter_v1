@@ -16,7 +16,7 @@ class SayartiHelpScreen extends StatefulWidget {
 class _SayartiHelpScreenState extends State<SayartiHelpScreen> {
   @override
   Widget build(BuildContext context) {
-    changeStatusColor(sayarti_app_background);
+    changeStatusColor(context.scaffoldBackgroundColor);
     return Scaffold(
       appBar: AppBar(
         title: text(sayarti_lbl_help,
@@ -29,13 +29,13 @@ class _SayartiHelpScreenState extends State<SayartiHelpScreen> {
           Navigator.of(context).pop();
         }),
         centerTitle: true,
-        backgroundColor: sayarti_app_background,
+        backgroundColor: context.scaffoldBackgroundColor,
         elevation: 0.0,
       ),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
-          color: sayarti_app_background,
+          color: context.scaffoldBackgroundColor,
           child: Column(
             children: <Widget>[
               SizedBox(

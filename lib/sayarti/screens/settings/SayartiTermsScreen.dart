@@ -31,11 +31,11 @@ class SayartiTermsConditionScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: sayarti_app_background,
+      backgroundColor: WAPrimaryColor,
       appBar: AppBar(
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.white),
-        backgroundColor: sayarti_app_background,
+        backgroundColor: WAPrimaryColor,
         title: Text("Termes et Conditions"),
       ),
       body: SingleChildScrollView(

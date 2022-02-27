@@ -7,12 +7,12 @@ import 'package:sayarti_flutter/main/utils/AppDataProvider.dart';
 import 'package:sayarti_flutter/main/utils/AppConstant.dart';
 import 'package:sayarti_flutter/main/utils/AppTheme.dart';
 import 'package:sayarti_flutter/sayarti/screens/SayartiSplashScreen.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 AppStore appStore = AppStore();
 BaseLanguage? language;
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   await initialize(aLocaleLanguageList: languageList());
 
   appStore.toggleDarkMode(value: getBoolAsync(isDarkModeOnPref));

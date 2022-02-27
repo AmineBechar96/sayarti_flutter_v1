@@ -5,6 +5,7 @@ import 'package:sayarti_flutter/locale/Languages.dart';
 import 'package:sayarti_flutter/main/model/AppModel.dart';
 import 'package:sayarti_flutter/main/utils/AppColors.dart';
 import 'package:sayarti_flutter/main/utils/AppConstant.dart';
+import 'package:sayarti_flutter/sayarti/utils/SayartiBubbleBar.dart';
 
 import '../../main.dart';
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:sayarti_flutter/main.dart';
 import 'package:sayarti_flutter/main/utils/AppConstant.dart';
 import 'package:sayarti_flutter/main/utils/AppWidget.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiColors.dart';
@@ -16,12 +17,18 @@ class SayartiEmailRequest extends StatefulWidget {
 class _SayartiEmailRequestState extends State<SayartiEmailRequest> {
   @override
   Widget build(BuildContext context) {
-    changeStatusColor(sayarti_app_background);
+    changeStatusColor(
+      context.scaffoldBackgroundColor,
+    );
     return Scaffold(
-        backgroundColor: sayarti_app_background,
+        backgroundColor: context.scaffoldBackgroundColor,
         appBar: AppBar(
-          title: text(sayarti_lbl_email,
-              fontSize: textSizeNormal, fontFamily: fontMedium),
+          title: text(
+            sayarti_lbl_email,
+            fontSize: textSizeNormal,
+            fontFamily: fontMedium,
+            textColor: appStore.isDarkModeOn ? t5White : null,
+          ),
           leading: Icon(
             Icons.arrow_back,
             color: sayarti_colorPrimary,
@@ -30,14 +37,14 @@ class _SayartiEmailRequestState extends State<SayartiEmailRequest> {
             Navigator.of(context).pop();
           }),
           centerTitle: true,
-          backgroundColor: sayarti_app_background,
+          backgroundColor: context.scaffoldBackgroundColor,
           elevation: 0.0,
         ),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Container(
               height: MediaQuery.of(context).size.height,
-              color: sayarti_app_background,
+              color: context.scaffoldBackgroundColor,
               child: Column(
                 children: <Widget>[
                   SizedBox(

@@ -22,10 +22,12 @@ const t5_img_fingerprint = "images/sayarti/t5_fingerprint.svg";
 const t5_payments = "images/sayarti/t5_payment.svg";
 const t5_signin = "images/sayarti/sign-in.svg";
 const t5_contact_img = "images/sayarti/contact.svg";
-const t5_help_img = "images/sayarti/help.svg";
+const t5_help_img = "images/sayarti/question.svg";
 const t5_terms_img = "images/sayarti/help.svg";
 const t5_qa_img = "images/sayarti/help2.svg";
 
+const Sayarti_ic_Grid = "images/sayarti/quiz_ic_grid.png";
+const Sayarti_ic_List = "images/sayarti/quiz_ic_list.png";
 const quiz_ic_communication = "$BaseUrl/images/quiz/quiz_ic_communication.png";
 const quiz_ic_communication2 =
     "$BaseUrl/images/quiz/quiz_ic_communication2.png";

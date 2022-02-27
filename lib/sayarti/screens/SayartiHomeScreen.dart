@@ -4,6 +4,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:sayarti_flutter/main.dart';
 import 'package:sayarti_flutter/main/utils/AppWidget.dart';
 import 'package:sayarti_flutter/sayarti/models/SayartiAppModel.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiColors.dart';
@@ -79,7 +80,8 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
         automaticallyImplyLeading: false,
         title: Image.asset('images/sayarti.png',
             fit: BoxFit.cover, width: 150, height: 50, color: Colors.white),
-        backgroundColor: WAPrimaryColor,
+        backgroundColor:
+            appStore.isDarkModeOn ? t5ColorPrimary : WAPrimaryColor,
         centerTitle: true,
       ),
       backgroundColor: t5LayoutBackgroundWhite,
@@ -89,7 +91,7 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
             Container(
               alignment: Alignment.topCenter,
               height: width,
-              color: WAPrimaryColor,
+              color: appStore.isDarkModeOn ? t5ColorPrimary : WAPrimaryColor,
               child: Container(
                 alignment: Alignment.center,
                 height: 140,
@@ -135,7 +137,7 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
                     padding: EdgeInsets.only(top: 60),
                     alignment: Alignment.topCenter,
                     decoration: BoxDecoration(
-                        color: t5LayoutBackgroundWhite,
+                        color: appStore.appBarColor!,
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(24),
                             topRight: Radius.circular(24))),
@@ -144,7 +146,7 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         text("Nos Services",
-                            textColor: t5TextColorPrimary,
+                            textColor: appStore.textPrimaryColor,
                             fontFamily: fontMedium,
                             fontSize: textSizeLarge),
                         const SizedBox(height: 30),

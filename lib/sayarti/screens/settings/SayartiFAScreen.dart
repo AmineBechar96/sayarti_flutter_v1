@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:sayarti_flutter/main.dart';
 import 'package:sayarti_flutter/main/utils/AppConstant.dart';
 import 'package:sayarti_flutter/sayarti/models/SayartiAppModel.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiColors.dart';
@@ -25,7 +26,7 @@ class _SayartiQuestionAnswerState extends State<SayartiQuestionAnswer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: sayarti_app_background,
+      backgroundColor: context.scaffoldBackgroundColor,
       body: Container(
         padding: EdgeInsets.all(16),
         child: SingleChildScrollView(
@@ -36,7 +37,11 @@ class _SayartiQuestionAnswerState extends State<SayartiQuestionAnswer> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Icon(Icons.chevron_left, size: 30, color: sayarti_blackColor)
+                  Icon(Icons.chevron_left,
+                          size: 30,
+                          color: appStore.isDarkModeOn
+                              ? t5White
+                              : sayarti_blackColor)
                       .onTap(
                     () {
                       finish(context);
@@ -44,8 +49,11 @@ class _SayartiQuestionAnswerState extends State<SayartiQuestionAnswer> {
                   ),
                   30.height,
                   Text(Sayarti_lbl_Questions_Answers,
-                      style:
-                          boldTextStyle(size: 30, color: t5TextColorPrimary)),
+                      style: boldTextStyle(
+                          size: 30,
+                          color: appStore.isDarkModeOn
+                              ? t5White
+                              : t5TextColorPrimary)),
                 ],
               ),
               ListView.builder(

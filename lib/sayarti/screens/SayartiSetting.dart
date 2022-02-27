@@ -29,7 +29,7 @@ class SayartiSettingsState extends State<SayartiSettings> {
   bool discounts = false;
   bool gift = false;
   bool darkmode = appStore.isDarkModeOn;
-  String? _selectedLocation = 'French';
+  String? _selectedLocation = 'Français';
 
   late double width;
 
@@ -71,17 +71,16 @@ class SayartiSettingsState extends State<SayartiSettings> {
   @override
   Widget build(BuildContext context) {
     width = MediaQuery.of(context).size.width;
-    changeStatusColor(appStore.appBarColor!);
+    changeStatusColor(context.scaffoldBackgroundColor);
 
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Image.asset(
-          'images/sayarti.png',
-          fit: BoxFit.cover,
-          width: 150,
-          height: 50,
-        ),
+        title: Image.asset('images/sayarti.png',
+            fit: BoxFit.cover,
+            width: 150,
+            height: 50,
+            color: appStore.isDarkModeOn ? Colors.white : null),
         backgroundColor: context.scaffoldBackgroundColor,
         centerTitle: true,
       ),
@@ -145,7 +144,7 @@ class SayartiSettingsState extends State<SayartiSettings> {
                                   color: t5TextColorSecondary),
                               underline: SizedBox(),
                               value: _selectedLocation,
-                              items: <String>['English', 'French', 'German']
+                              items: <String>['Français', 'العربية', 'English']
                                   .map((String value) {
                                 return DropdownMenuItem<String>(
                                   value: value,
