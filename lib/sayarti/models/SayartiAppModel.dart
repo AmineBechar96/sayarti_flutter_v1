@@ -21,6 +21,16 @@ class NewServiceModel {
   var serviceName = "";
   var totalService = "";
   var serviceImage = "";
+  Widget? page;
+}
+
+class SpendingModel {
+  Color? color;
+  IconData? icon;
+  String? name;
+  String? rate;
+
+  SpendingModel({this.color, this.icon, this.name, this.rate});
 }
 
 class NBNewsDetailsModel {
@@ -57,4 +67,29 @@ class SayartiQuesAnsModel {
   String ques = "";
 
   SayartiQuesAnsModel(this.ques);
+}
+
+class EAForYouModel {
+  String? hashtag;
+  String? name;
+  double? rating;
+  String? add;
+  String? attending;
+  String? time;
+  String? image;
+  String? price;
+  double? distance;
+  bool? fev;
+
+  EAForYouModel(
+      {this.hashtag,
+      this.name,
+      this.rating,
+      this.add,
+      this.attending,
+      this.time,
+      this.image,
+      this.distance,
+      this.price,
+      this.fev = false});
 }

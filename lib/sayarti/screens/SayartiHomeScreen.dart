@@ -7,6 +7,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:sayarti_flutter/main.dart';
 import 'package:sayarti_flutter/main/utils/AppWidget.dart';
 import 'package:sayarti_flutter/sayarti/models/SayartiAppModel.dart';
+import 'package:sayarti_flutter/sayarti/screens/home/EstimationPrix.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiColors.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiDataGenerator.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiImages.dart';
@@ -29,6 +30,12 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
     super.initState();
   }
 
+  var widgeto = [
+    EstimationPrixScreen(),
+    EstimationPrixScreen(),
+    EstimationPrixScreen(),
+    EstimationPrixScreen(),
+  ];
   var currentIndex = 0;
   var iconList = <String>[
     t5_analysis,
@@ -69,7 +76,11 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
                 textColor: t5TextColorPrimary,
                 fontFamily: fontSemibold)
           ],
-        ));
+        )).onTap(() {
+      setState(() {
+        widgeto[pos].launch(context);
+      });
+    });
   }
 
   @override
@@ -118,7 +129,9 @@ class _SayartiHomeScreenState extends State<SayartiHomeScreen> {
                             padding: EdgeInsets.all(10),
                             child: Icon(Icons.search, color: sayarti_white),
                           ).onTap(() {
-                            setState(() {});
+                            setState(() {
+                              EstimationPrixScreen().launch(context);
+                            });
                           })
                         ],
                       ),

@@ -12,7 +12,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 AppStore appStore = AppStore();
 BaseLanguage? language;
 Future<void> main() async {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   await initialize(aLocaleLanguageList: languageList());
 
   appStore.toggleDarkMode(value: getBoolAsync(isDarkModeOnPref));

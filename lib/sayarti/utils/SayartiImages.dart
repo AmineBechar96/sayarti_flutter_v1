@@ -31,9 +31,11 @@ const Sayarti_ic_List = "images/sayarti/quiz_ic_list.png";
 const quiz_ic_communication = "$BaseUrl/images/quiz/quiz_ic_communication.png";
 const quiz_ic_communication2 =
     "$BaseUrl/images/quiz/quiz_ic_communication2.png";
-const quiz_ic_course1 = "$BaseUrl/images/quiz/quiz_ic_course1.png";
-const quiz_ic_course2 = "$BaseUrl/images/quiz/quiz_ic_course2.png";
-const quiz_ic_course3 = "$BaseUrl/images/quiz/quiz_ic_course3.png";
+
+const mechanic =
+    "https://sayarti.org/app-assets/images/pages/location/mechanic2.jpg";
+const piece = "https://sayarti.org/app-assets/images/pages/depannage/piece.jpg";
+const toyota = "https://sayarti.org/app-assets/images/brands/toyota.png";
 
 const quiz_ic_study1 = "$BaseUrl/images/quiz/quiz_ic_study1.png";
 const quiz_ic_study2 = "$BaseUrl/images/quiz/quiz_ic_study2.png";
@@ -45,3 +47,8 @@ const NBTechNews2 = 'images/sayarti/nb_technologyImage2.jpg';
 const NBNewsImage1 = 'images/sayarti/nb_newsImage1.jpg';
 const NBNewsImage2 = 'images/sayarti/nb_newsImage2.jpg';
 const NBNewsImage3 = 'images/sayarti/nb_newsImage3.jpg';
+
+const event_ic_london = "images/sayarti/london.jpg";
+const event_ic_newYork = "images/sayarti/newyork.jpg";
+const event_ic_paris = "images/sayarti/paris.jpg";
+const event_ic_tokyo = "images/sayarti/tokyo.jpg";

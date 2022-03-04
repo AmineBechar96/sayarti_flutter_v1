@@ -140,3 +140,84 @@ class sayarticontactButtonState extends State<sayarticontactButton> {
     );
   }
 }
+
+AppBar getAppBar(String title,
+    {List<Widget>? actions,
+    PreferredSizeWidget? bottom,
+    bool? center,
+    Widget? titleWidget,
+    double? elevation,
+    Widget? backWidget}) {
+  return AppBar(
+    title: titleWidget ??
+        Text(title, style: boldTextStyle(color: whiteColor, size: 18)),
+    flexibleSpace: AppBarGradientWidget(),
+    actions: actions,
+    centerTitle: center,
+    leading: backWidget,
+    bottom: bottom,
+    automaticallyImplyLeading: false,
+    brightness: Brightness.dark,
+    elevation: elevation,
+  );
+}
+
+class AppBarGradientWidget extends StatelessWidget {
+  final Widget? child;
+
+  AppBarGradientWidget({this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            primaryColor1,
+            primaryColor2,
+          ],
+        ),
+      ),
+      child: child,
+    );
+  }
+}
+
+InputDecoration waInputDecoration(
+    {IconData? prefixIcon,
+    String? hint,
+    Color? bgColor,
+    Color? borderColor,
+    EdgeInsets? padding}) {
+  return InputDecoration(
+    contentPadding:
+        padding ?? EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+    counter: Offstage(),
+    focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: BorderSide(color: borderColor ?? WAPrimaryColor)),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.all(Radius.circular(16)),
+      borderSide: BorderSide(color: Colors.grey.withOpacity(0.2)),
+    ),
+    fillColor: bgColor ?? WAPrimaryColor.withOpacity(0.04),
+    hintText: hint,
+    prefixIcon:
+        prefixIcon != null ? Icon(prefixIcon, color: WAPrimaryColor) : null,
+    hintStyle: secondaryTextStyle(),
+    filled: true,
+  );
+}
+
+Widget indicator({required bool isActive}) {
+  return AnimatedContainer(
+    duration: Duration(milliseconds: 150),
+    margin: EdgeInsets.symmetric(horizontal: 4.0),
+    height: isActive ? 6.0 : 4.0,
+    width: isActive ? 6.0 : 4.0,
+    decoration: BoxDecoration(
+      color: isActive ? Colors.white : Color(0xFF929794),
+      borderRadius: BorderRadius.all(Radius.circular(50)),
+    ),
+  );
+}

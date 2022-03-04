@@ -41,6 +41,7 @@ dependencies:
   nb_utils: ^4.4.8
   google_fonts: 2.2.0
   intl: ^0.17.0
+  flutter_vector_icons: ^1.0.0
 
 
   # UI
@@ -117,13 +118,6 @@ flutter_native_splash:
   ios: true
   web: true
 
-  #android_gravity: center
-  #
-  # ios_content_mode can be one of the following iOS UIView.ContentMode (see
-  # https://developer.apple.com/documentation/uikit/uiview/contentmode): scaleToFill,
-  # scaleAspectFit, scaleAspectFill, center, top, bottom, left, right, topLeft, topRight,
-  # bottomLeft, or bottomRight.
-  #ios_content_mode: center
   #
   # web_image_mode can be one of the following modes: center, contain, stretch, and cover.
   #web_image_mode: center
@@ -138,9 +132,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - images/sayarti.png
-   - images/food/
    - images/sayarti/
-   - images/theme9/
    - images/LikeButton/image/
   #   - images/a_dot_ham.jpeg
 

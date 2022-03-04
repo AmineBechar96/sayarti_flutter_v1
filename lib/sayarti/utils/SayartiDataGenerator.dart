@@ -1,6 +1,11 @@
 // ignore_for_file: file_names
 
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:sayarti_flutter/sayarti/models/SayartiAppModel.dart';
+import 'package:sayarti_flutter/sayarti/screens/magasin/Mechanicien.dart';
+import 'package:sayarti_flutter/sayarti/screens/magasin/PieceDetacheScreen.dart';
+import 'package:sayarti_flutter/sayarti/screens/magasin/PointsDeVente.dart';
+import 'package:sayarti_flutter/sayarti/screens/settings/SayartiHelpScreen.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiColors.dart';
 import 'package:sayarti_flutter/sayarti/utils/SayartiImages.dart';
 
@@ -94,19 +99,22 @@ List<SayartiCategory> getCategoryItems() {
 List<NewServiceModel> getServiceData() {
   List<NewServiceModel> list = [];
   NewServiceModel model4 = NewServiceModel();
-  model4.serviceName = "Art and \nPainting Basic";
-  model4.totalService = "10 Quiz";
-  model4.serviceImage = quiz_ic_course1;
+  model4.serviceName = "Points de Vente";
+  model4.totalService = "Cliquez Ici";
+  model4.serviceImage = toyota;
+  model4.page = PointsDeVente();
 
   NewServiceModel model5 = NewServiceModel();
-  model5.serviceName = "Communication Basic";
-  model5.totalService = "10 Quiz";
-  model5.serviceImage = quiz_ic_communication;
+  model5.serviceName = "Mécanicien";
+  model5.totalService = "Cliquez Ici";
+  model5.serviceImage = mechanic;
+  model5.page = Mecanicien();
 
   NewServiceModel model6 = NewServiceModel();
-  model6.serviceName = "Investment and \nTypes";
-  model6.totalService = "10 Quiz";
-  model6.serviceImage = quiz_ic_course2;
+  model6.serviceName = "Piéces Détachés";
+  model6.totalService = "Cliquez Ici";
+  model6.serviceImage = piece;
+  model6.page = PieceDetacheScreen();
 
   list.add(model6);
   list.add(model4);
@@ -235,4 +243,138 @@ List<SayartiQuesAnsModel> sayartiQuestionList() {
   list.add(list6);
 
   return list;
+}
+
+List<EAForYouModel> forYouList = [
+  EAForYouModel(
+      name: "NY Single Party Events",
+      add: "93, Bayport Ave South..",
+      attending: "19/5k attending",
+      hashtag: "#date",
+      rating: 4.3,
+      price: "20",
+      distance: 8,
+      image: event_ic_london,
+      fev: true),
+  EAForYouModel(
+      name: "The Wonder Women Free Tickets ",
+      add: "Tobacco Dock,London ",
+      attending: "19/5k attending",
+      hashtag: "#cinema #movie",
+      rating: 4.3,
+      time: "06 Hrs 27 Mins 44 Secs,",
+      price: "Free",
+      distance: 8,
+      image: event_ic_tokyo,
+      fev: false),
+  EAForYouModel(
+      name: "NY Single Party Events",
+      add: "93, Bayport Ave South..",
+      attending: "19/5k attending",
+      hashtag: "#date",
+      rating: 4.3,
+      price: "20",
+      distance: 8,
+      image: event_ic_paris,
+      fev: false),
+  EAForYouModel(
+      name: "The Wonder Women Free Tickets ",
+      add: "Tobacco Dock,London ",
+      attending: "19/5k attending",
+      hashtag: "#cinema #movie",
+      rating: 4.3,
+      time: "06 Hrs 27 Mins 44 Secs,",
+      price: "Free",
+      distance: 8,
+      image: event_ic_newYork,
+      fev: false),
+  EAForYouModel(
+      name: "NY Single Party Events",
+      add: "93, Bayport Ave South..",
+      attending: "19/5k attending",
+      hashtag: "#date",
+      rating: 4.3,
+      price: "20",
+      distance: 8,
+      image: event_ic_paris,
+      fev: false),
+  EAForYouModel(
+      name: "The Wonder Women Free Tickets ",
+      add: "Tobacco Dock,London ",
+      attending: "19/5k attending",
+      hashtag: "#cinema #movie",
+      rating: 4.3,
+      time: "06 Hrs 27 Mins 44 Secs,",
+      price: "Free",
+      distance: 8,
+      image: event_ic_tokyo,
+      fev: false),
+];
+
+List<EAForYouModel> getMayKnowData() {
+  List<EAForYouModel> list = [];
+  list.add(EAForYouModel(
+      name: "jose Lowe",
+      add: "156 followers",
+      image:
+          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.9.jpg',
+      fev: false));
+  list.add(EAForYouModel(
+      name: "Smit Jhon",
+      add: "200 followers",
+      image:
+          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.1.jpg',
+      fev: false));
+  list.add(EAForYouModel(
+      name: "Louisa Lyons",
+      add: "230 followers",
+      image:
+          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.2.jpg',
+      fev: false));
+  list.add(EAForYouModel(
+      name: "Hulda James",
+      add: "100 followers",
+      image:
+          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.3.jpg',
+      fev: false));
+  list.add(EAForYouModel(
+      name: "Bessie Mendoza",
+      add: "150 followers",
+      image:
+          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.4.jpg',
+      fev: false));
+  list.add(EAForYouModel(
+      name: "Matilda MCGuire",
+      add: "260 followers",
+      image:
+          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.9.jpg',
+      fev: false));
+  list.add(EAForYouModel(
+      name: "Harriett Coleman",
+      add: "400 followers",
+      image:
+          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.1.jpg',
+      fev: false));
+  return list;
+}
+
+List<SpendingModel> getSpendingList() {
+  List<SpendingModel> spendingList = [];
+  spendingList.add(SpendingModel(
+      color: t14_TextField_BgColor,
+      icon: MaterialCommunityIcons.arrow_bottom_left,
+      name: 'Prix Minimum',
+      rate: '1,080.000 DZD'));
+  spendingList.add(SpendingModel(
+      color: t14_OppsColor,
+      icon: MaterialCommunityIcons.arrow_top_right,
+      name: 'Prix Maximum',
+      rate: '1,200.000 DZD'));
+  spendingList.add(SpendingModel(
+      color: t14_SignInBgColor2,
+      icon: MaterialCommunityIcons.percent,
+      name: 'Précision',
+      rate: '84 %'));
+
+  return spendingList;
 }

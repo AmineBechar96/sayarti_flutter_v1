@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:sayarti_flutter/main.dart';
 import 'package:sayarti_flutter/main/utils/AppConstant.dart';
 import 'package:sayarti_flutter/main/utils/AppWidget.dart';
 import 'package:sayarti_flutter/sayarti/models/SayartiAppModel.dart';
@@ -34,7 +35,7 @@ class _SayartiServiceScreenState extends State<SayartiServiceScreen> {
   Widget build(BuildContext context) {
     var w = MediaQuery.of(context).size.width;
 
-    var spacing_standard_new;
+    const spacing_standard_new = 16.0;
     final listing = Container(
       child: ListView.builder(
         scrollDirection: Axis.vertical,
@@ -43,13 +44,13 @@ class _SayartiServiceScreenState extends State<SayartiServiceScreen> {
         physics: ScrollPhysics(),
         itemBuilder: (BuildContext context, int index) => GestureDetector(
           onTap: () {
-            setState(() {});
+            setState(() {
+              mListings[index].page.launch(context);
+            });
           },
           child: Container(
             decoration: boxDecoration(
-                radius: 16,
-                showShadow: true,
-                bgColor: context.scaffoldBackgroundColor),
+                radius: 16, showShadow: true, bgColor: appStore.appBarColor),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -128,7 +129,7 @@ class _SayartiServiceScreenState extends State<SayartiServiceScreen> {
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(16.0),
                       bottomRight: Radius.circular(16.0)),
-                  color: t5White,
+                  color: appStore.appBarColor,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -146,7 +147,9 @@ class _SayartiServiceScreenState extends State<SayartiServiceScreen> {
               ),
             ],
           ),
-        ).cornerRadiusWithClipRRect(16).onTap(() {});
+        ).cornerRadiusWithClipRRect(16).onTap(() {
+          mListings[index].page.launch(context);
+        });
       },
       //gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 0.58, crossAxisSpacing: 16, mainAxisSpacing: 16),
     );
@@ -155,15 +158,12 @@ class _SayartiServiceScreenState extends State<SayartiServiceScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title:
-            text('img', fontSize: textSizeLargeMedium, fontFamily: fontMedium),
-        leading: Icon(
-          Icons.arrow_back,
-          color: sayarti_colorPrimary,
-          size: 30,
-        ).onTap(() {
-          Navigator.of(context).pop();
-        }),
+        automaticallyImplyLeading: false,
+        title: Image.asset('images/sayarti.png',
+            fit: BoxFit.cover,
+            width: 150,
+            height: 50,
+            color: appStore.isDarkModeOn ? Colors.white : null),
         centerTitle: true,
         backgroundColor: context.scaffoldBackgroundColor,
         elevation: 0.0,
@@ -175,10 +175,10 @@ class _SayartiServiceScreenState extends State<SayartiServiceScreen> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 30),
-                text(sayarti_lbl_hi_bienvenue,
+                text(sayarti_marche_magasin,
                     fontFamily: fontBold, fontSize: textSizeXLarge),
-                text(
-                    sayarti_lbl_what_would_you_like_to_learn_n_today_search_below,
+                const SizedBox(height: 20),
+                text(sayarti_service_magasin,
                     textColor: sayarti_textColorSecondary,
                     isLongText: true,
                     isCentered: true),

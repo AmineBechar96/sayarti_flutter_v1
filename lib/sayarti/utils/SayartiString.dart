@@ -45,3 +45,15 @@ const sayarti_Submitted = "Envoyé !";
 const Banking_lbl_Walk1SubTitle =
     "Each payment process is so simple and hassle-free, and I don not need to be worried about being scammedEach Payment process is so simple and hassle-free";
 const Sayarti_lbl_Questions_Answers = "Questions et Réponses";
+
+const sayarti_service_magasin =
+    "Tout les Meilleurs Marchés et Magasins \nde Vente des accesoires  de \n Voiture .";
+const sayarti_marche_magasin = "Marché et Magasin";
+
+const t14_txt_Finance3 = "Spending Breakdown";
+
+const sayarti_nom_voiture = 'Toyota Yaris Sedan';
+const sayarti_annee_voiture = '2007';
+const sayarti_prix = '1,130.000';
+const sayarti_currency = 'DZD';
+const sayarti_info_voiture = 'Information de la Voiture';

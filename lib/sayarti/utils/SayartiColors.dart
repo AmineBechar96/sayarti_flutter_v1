@@ -54,3 +54,18 @@ const sayarti_ShadowColor = Color(0X95E9EBF0);
 const sayarti_form_google = Color(0xFFF13B19);
 
 const sayarti_blackColor = Color(0xFF070706);
+const primaryColor1 = Color(0xFFED3269);
+const primaryColor2 = Color(0xFFFD5F3E);
+const facebook = Color(0xFF3B5997);
+const twitter = Color(0xFF1DA0F1);
+
+const opPrimaryColor = Color(0xFF343EDB);
+const opSecondaryColor = Color(0xFF757575);
+const opOrangeColor = Color(0xFFFF6E18);
+const opBackgroundColor = Color(0xFFFFFFFF);
+
+const t14_colorBlue = Color(0xFF002551);
+const t14_SignInBgColor2 = Color(0xFFF6DEE7);
+const t14_OppsColor = Color(0xFFFD4563);
+const t14_TextField_BgColor = Color(0xFF1D82FC);
+const t14_finance3_spending1 = Color(0xFFF7D283);
